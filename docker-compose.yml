@@ -1,0 +1,7 @@
+services:
+  ratmir-dota-site:
+    build: .
+    container_name: ratmir-dota-site
+    ports:
+      - "8012:80"
+    restart: unless-stopped

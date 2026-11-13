@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ратмир — Dota 2 Pro Profile</title>
+    <style>
+        :root {
+            --bg-dark: #0e1013;
+            --card-bg: #181c22;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --lc-color: #e11d48;
+            --pudge-color: #16a34a;
+            --accent-gold: #eab308;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(180deg, #1e242b 0%, var(--bg-dark) 100%);
+            border-bottom: 2px solid #2d3540;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: var(--accent-gold);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
+
+        .heroes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .hero-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border-top: 4px solid transparent;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-card.lc {
+            border-top-color: var(--lc-color);
+        }
+
+        .hero-card.pudge {
+            border-top-color: var(--pudge-color);
+        }
+
+        .hero-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .hero-title {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+
+        .lc .hero-title { color: var(--lc-color); }
+        .pudge .hero-title { color: var(--pudge-color); }
+
+        .role-badge {
+            background-color: #262c36;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .skills-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .skills-list li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .skills-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+
+        .stats-bar {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-gold);
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 20px;
+            border-top: 1px solid #2d3540;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Привет, я <span>Ратмир</span></h1>
+        <p class="subtitle">Гроза пабликов, мастер инициации и цепных хуков в Dota 2</p>
+    </header>
+
+    <section class="stats-bar">
+        <div class="stat-item">
+            <h3>300+</h3>
+            <p>Урона с дуэлей за игру</p>
+        </div>
+        <div class="stat-item">
+            <h3>95%</h3>
+            <p>Точность хуков в слепую</p>
+        </div>
+        <div class="stat-item">
+            <h3>Pos 3 / 4</h3>
+            <p>Основные роли в матче</p>
+        </div>
+    </section>
+
+    <section class="heroes-grid">
+        <!-- Карточка Legion Commander -->
+        <div class="hero-card lc">
+            <div class="hero-header">
+                <h2 class="hero-title">Legion Commander</h2>
+                <span class="role-badge">Offlane / Инициатор</span>
+            </div>
+            <p>Бесстрашный полководец, который не оставляет вражеским корам ни единого шанса на выживание в лейте.</p>
+            <ul class="skills-list">
+                <li><strong>Идеальный тайминг Blink + Duel:</strong> Мгновенное выключение ключевого героя противника из драки.</li>
+                <li><strong>Своевременный Press The Attack:</strong> Снятие любых дизейблов с союзного керри в критический момент.</li>
+                <li><strong>Доминация на линии:</strong> Грамотный размен здоровьем через Moment of Courage и Overwhelming Odds.</li>
+                <li><strong>Сноуболл по карте:</strong> Постоянный поиск фрагов сразу после покупки Blink Dagger и Blade Mail.</li>
+            </ul>
+        </div>
+
+        <!-- Карточка Pudge -->
+        <div class="hero-card pudge">
+            <div class="hero-header">
+                <h2 class="hero-title">Pudge</h2>
+                <span class="role-badge">Roamer / Support / Tank</span>
+            </div>
+            <p>Кошмар вражеского мидера и неубиваемая гора плоти в поздней стадии игры.</p>
+            <ul class="skills-list">
+                <li><strong>Meat Hook на упреждение:</strong> Чтение передвижений соперника в тумане войны и сбитие телепортов.</li>
+                <li><strong>Контроль сквозь BKB:</strong> Использование Dismember для удержания самых мобильных героев врага.</li>
+                <li><strong>Накопление Flesh Heap:</strong> Огромный запас здоровья и сопротивление магии к 30-й минуте.</li>
+                <li><strong>Сейв союзников:</strong> Вытягивание тиммейтов из вражеского фокуса или хроносферы.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Разработано Ратмиром • Упаковано в Docker • Раздается через Nginx</p>
+    </footer>
+</div>
+
+</body>
+</html>
